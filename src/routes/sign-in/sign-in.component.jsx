@@ -8,13 +8,16 @@ import {
   createUserDocumentFromAuth,
 } from "../../utils/firebase/firebase.utils";
 
-const handleRedir = async() => {
-  const  response = await getRedirectResult(auth);
-  console.log(response)
-}
 
 const SignIn = () => {
-  useEffect(() => {handleRedir()}, [])
+  useEffect(() => {
+    const handleRedir = async() => {
+      const  response = await getRedirectResult(auth);
+      console.log(response)
+    }
+    handleRedir()
+    .catch(console.error)
+  }, [])
 
   const logGoogleUser = async() => {
     const { user } = await signInWithGooglePopup();
