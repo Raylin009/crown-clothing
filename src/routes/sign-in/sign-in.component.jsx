@@ -13,7 +13,9 @@ const SignIn = () => {
   useEffect(() => {
     const handleRedir = async() => {
       const  response = await getRedirectResult(auth);
-      console.log(response)
+      if(response){
+        const userDocRef = await createUserDocumentFromAuth(response.user)
+      }
     }
     handleRedir()
     .catch(console.error)
