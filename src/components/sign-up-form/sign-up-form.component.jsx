@@ -24,7 +24,7 @@ const SignUpForm = () => {
     setFormFields(defaultFormFields);
   }
 
-  console.log(formFields);
+  // console.log(formFields);
   const handleChange = (event) => {
     const { name, value } = event.target;
 
