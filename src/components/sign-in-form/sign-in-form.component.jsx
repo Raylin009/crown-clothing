@@ -3,7 +3,7 @@ import { useState, useContext } from 'react';
 import FormInput from '../form-input/form-input.component'
 import Button from '../button/button.conponent';
 
-import { UserContext } from '../contexts/user.context';
+import { UserContext } from '../../contexts/user.context';
 import {
   signInWithGooglePopup,
   createUserDocumentFromAuth,
